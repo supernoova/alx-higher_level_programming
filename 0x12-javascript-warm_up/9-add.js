@@ -1,6 +1,8 @@
 #!/usr/bin/node
+// prints the addition of 2 integers
 
-const num1 = process.argv[2];
-const num2 = process.argv[3];
+function add (a, b) {
+  return parseInt(a) + parseInt(b);
+}
 
-console.log(Number(num1) + Number(num2));
+console.log(add(process.argv[2], process.argv[3]));

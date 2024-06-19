@@ -1,18 +1,10 @@
 #!/usr/bin/node
+// prints a square
 
-let i = 0; let j; let string = '';
-const size = process.argv[2];
-
-if (isNaN(parseInt(size)) || !size) {
+if (isNaN(process.argv[2])) {
   console.log('Missing size');
 } else {
-  const num = Number(size);
-  while (i++ < num) {
-    j = 0;
-    string = '';
-    while (j++ < size) {
-      string += 'X';
-    }
-    console.log(string);
+  for (let i = 0; i < parseInt(process.argv[2]); i++) {
+    console.log('X'.repeat(parseInt(process.argv[2])));
   }
 }
